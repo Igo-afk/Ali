@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: red;
+        }
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 800px;
+            height: 520px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 15px;
+            margin-top: 200px;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -100px;
+            border-radius: 10px;
+        }
+        #nao{
+            position: absolute;
+            margin-left: 70px;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+        }
+        #urso{
+            margin-top: 30px;
+            position: absolute;
+            margin-left: 30px;
+            border-radius: 10px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <title>Feliz Aniversário amor da minha vida</title>
+    <a href="cartinha.html"><img src="https://i.pinimg.com/originals/fa/49/4e/fa494e85b6099eda29f75fa0ae547e7a.gif" alt="" id="urso"></a>
+    <div class="painel">
+        <h1>FELIZ ANIVERSÁRIO AMOR DA MINHA VIDA</h1>
+        <hr>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3F5YWQwZjl4aGM2OGZrMThmNnp0NG9kNHYxY3p3ZDh6dW1qb2VqNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wgSlUC7fhlO9wwa03n/giphy.gif" alt="">
+        <hr>
+        <h3>Preparado pra passar o resto dos seus aniversarios comigo?</h3>
+        <a href="https://youtu.be/izGwDsrQ1eQ?si=3VIu-pJOqcFkYxko" onmouseover="AnimationEffect"><button id="sim"> Sim! </button></a>
+        <button id="nao" onmouseover="fuja()"> Não! </button>
+    </div>
+    
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth
+            var alturaJanela = window.innerHeight
+
+            var maxX = larguraJanela - botaoNao.offsetWidth
+            var maxY = alturaJanela - botaoNao.offsetHeight
+
+            var aleatorioX = Math.floor(Math.random() * maxX)
+            var aleatorioY = Math.floor(Math.random() * maxY)
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+
+</body>
+</html>
